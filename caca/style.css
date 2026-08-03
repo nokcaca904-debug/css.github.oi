@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding:60px 20px;
+    overflow-x:hidden;
+    position:relative;
+    font-family:'Poppins',sans-serif;
+
+    background:
+    linear-gradient(180deg,#75b8ff 0%,#4d7fff 35%,#2d4da5 70%,#1b275f 100%);
+}
+
+/* Aurora */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:700px;
+    height:700px;
+    background:radial-gradient(circle,#9be7ff66,transparent 70%);
+    top:-250px;
+    left:-150px;
+    filter:blur(80px);
+    animation:aurora 8s ease-in-out infinite alternate;
+    z-index:0;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:600px;
+    height:600px;
+    background:radial-gradient(circle,#d8c3ff55,transparent 70%);
+    bottom:-200px;
+    right:-150px;
+    filter:blur(80px);
+    animation:aurora2 10s ease-in-out infinite alternate;
+    z-index:0;
+}
+
+@keyframes aurora{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(60px);
+}
+
+}
+
+@keyframes aurora2{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(-50px);
+}
+
+}
+
+/* Bintang */
+
+.stars{
+
+position:fixed;
+
+inset:0;
+
+background-image:
+
+radial-gradient(circle,#ffffff 1px,transparent 2px);
+
+background-size:130px 130px;
+
+opacity:.45;
+
+animation:stars 90s linear infinite;
+
+z-index:0;
+
+}
+
+@keyframes stars{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(-1000px);
+}
+
+}
+
+/* Form */
+
+.form-card{
+
+position:relative;
+
+z-index:5;
+
+width:100%;
+
+max-width:720px;
+
+padding:38px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.35);
+
+box-shadow:
+
+0 10px 35px rgba(0,0,0,.18),
+
+0 0 25px rgba(255,255,255,.2);
+
+}
+
+/* Ornamen */
+
+.form-card::before{
+
+content:"✦ Ekstrakulikuler ✦";
+
+display:block;
+
+text-align:center;
+
+font-family:'Cinzel',serif;
+
+font-size:30px;
+
+font-weight:bold;
+
+color:#fff9d9;
+
+letter-spacing:2px;
+
+margin-bottom:10px;
+
+text-shadow:
+
+0 0 12px rgba(255,255,255,.6);
+
+}
+
+.form-card::after{
+
+content:"Kirim dan bergabung dengan Ekstrakulikuler pilihan kalian.";
+
+display:block;
+
+text-align:center;
+
+margin-bottom:30px;
+
+color:#eef4ff;
+
+font-size:14px;
+
+}
+
+/* Form */
+
+#user-data{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+/* Label */
+
+label{
+
+margin-top:16px;
+
+margin-bottom:8px;
+
+font-weight:600;
+
+color:white;
+
+}
+
+p{
+
+margin-top:20px;
+
+margin-bottom:10px;
+
+font-weight:bold;
+
+color:#fff2b3;
+
+}
+
+/* Input */
+
+input[type=text],
+select{
+
+width:100%;
+
+padding:14px 16px;
+
+border-radius:15px;
+
+border:1px solid rgba(255,255,255,.3);
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(10px);
+
+color:white;
+
+font-size:15px;
+
+outline:none;
+
+transition:.3s;
+
+}
+
+input::placeholder{
+
+color:#eef5ff;
+
+}
+
+select option{
+
+background:#2f4f99;
+
+color:white;
+
+}
+
+input:focus,
+select:focus{
+
+border-color:#ffe082;
+
+box-shadow:
+
+0 0 15px rgba(255,224,130,.5);
+
+}
+
+/* Radio */
+
+input[type=radio],
+input[type=checkbox]{
+
+accent-color:#ffd54f;
+
+margin-right:8px;
+
+}
+
+label:has(input[type=radio]),
+label:has(input[type=checkbox]){
+
+display:flex;
+
+align-items:center;
+
+padding:10px 12px;
+
+margin-top:8px;
+
+background:rgba(255,255,255,.08);
+
+border-radius:12px;
+
+transition:.3s;
+
+cursor:pointer;
+
+}
+
+label:has(input[type=radio]):hover,
+label:has(input[type=checkbox]):hover{
+
+background:rgba(255,255,255,.18);
+
+transform:translateX(4px);
+
+}
+
+/* Tombol */
+
+button{
+
+margin-top:35px;
+
+padding:16px;
+
+border:none;
+
+border-radius:16px;
+
+font-size:16px;
+
+font-weight:bold;
+
+font-family:'Cinzel',serif;
+
+cursor:pointer;
+
+background:linear-gradient(135deg,#ffe082,#ffd54f,#ffca28);
+
+color:#34495e;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+
+0 0 20px rgba(255,215,64,.7);
+
+}
+
+button:active{
+
+transform:scale(.98);
+
+}
+
+/* Scroll */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#ffd54f;
+
+border-radius:20px;
+
+}

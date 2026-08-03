@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding:50px 20px;
+    overflow-x:hidden;
+
+    background:
+    linear-gradient(#7ec0ee 0%, #9dd8ff 40%, #6cc46e 40%, #5aa84d 100%);
+}
+
+/* Matahari */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:120px;
+    height:120px;
+    background:#ffe44d;
+    top:40px;
+    right:60px;
+    box-shadow:0 0 40px #ffd000;
+}
+
+/* Rumput */
+
+body::after{
+    content:"";
+    position:fixed;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:120px;
+    background:
+    repeating-linear-gradient(
+        90deg,
+        #4CAF50 0px,
+        #4CAF50 30px,
+        #3c9440 30px,
+        #3c9440 60px
+    );
+}
+
+/* Card */
+
+.form-card{
+
+    position:relative;
+
+    z-index:5;
+
+    width:100%;
+
+    max-width:700px;
+
+    background:#c6c6c6;
+
+    border:5px solid #444;
+
+    box-shadow:
+
+    8px 8px 0 #222;
+
+    padding:30px;
+
+}
+
+/* Judul */
+
+.form-card::before{
+
+content:"EKSTRAKULIKULER";
+
+display:block;
+
+font-family:'Press Start 2P',cursive;
+
+font-size:18px;
+
+text-align:center;
+
+line-height:1.7;
+
+margin-bottom:20px;
+
+color:#1e1e1e;
+
+}
+
+.form-card::after{
+
+content:"Choose your adventure!";
+
+display:block;
+
+text-align:center;
+
+margin-bottom:25px;
+
+font-family:'Poppins',sans-serif;
+
+font-size:14px;
+
+}
+
+/* Form */
+
+#user-data{
+
+display:flex;
+
+flex-direction:column;
+
+font-family:'Poppins',sans-serif;
+
+}
+
+/* Label */
+
+label{
+
+margin-top:15px;
+
+margin-bottom:8px;
+
+font-weight:bold;
+
+color:#222;
+
+}
+
+p{
+
+margin-top:20px;
+
+margin-bottom:10px;
+
+font-weight:bold;
+
+color:#2d5d2d;
+
+}
+
+/* Input */
+
+input[type=text],
+select{
+
+width:100%;
+
+padding:12px;
+
+font-size:15px;
+
+background:white;
+
+border:3px solid #555;
+
+outline:none;
+
+font-family:'Poppins',sans-serif;
+
+}
+
+input:focus,
+select:focus{
+
+border-color:#45c945;
+
+}
+
+/* Option */
+
+select option{
+
+background:white;
+
+color:black;
+
+}
+
+/* Radio */
+
+input[type=radio],
+input[type=checkbox]{
+
+accent-color:#39b54a;
+
+margin-right:8px;
+
+}
+
+/* Kotak pilihan */
+
+label:has(input[type=radio]),
+label:has(input[type=checkbox]){
+
+display:flex;
+
+align-items:center;
+
+padding:10px;
+
+background:#e9e9e9;
+
+border:2px solid #666;
+
+margin-top:8px;
+
+transition:.2s;
+
+cursor:pointer;
+
+}
+
+label:has(input[type=radio]):hover,
+label:has(input[type=checkbox]):hover{
+
+background:#bfe7bf;
+
+}
+
+/* Tombol */
+
+button{
+
+margin-top:30px;
+
+padding:15px;
+
+font-family:'Press Start 2P',cursive;
+
+font-size:12px;
+
+background:#58b34a;
+
+color:white;
+
+border:4px solid #2d7d2d;
+
+cursor:pointer;
+
+transition:.2s;
+
+}
+
+button:hover{
+
+background:#6fd65d;
+
+transform:translateY(-2px);
+
+}
+
+button:active{
+
+transform:translateY(3px);
+
+box-shadow:none;
+
+}
+
+/* Responsive */
+
+@media(max-width:700px){
+
+.form-card{
+
+padding:20px;
+
+}
+
+.form-card::before{
+
+font-size:13px;
+
+}
+
+button{
+
+font-size:10px;
+
+}
+
+}

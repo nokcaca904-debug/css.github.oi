@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding:60px 20px;
+    overflow-x:hidden;
+    font-family:'Poppins',sans-serif;
+
+    background:
+    radial-gradient(circle at top,#5b3ea8 0%,transparent 30%),
+    radial-gradient(circle at bottom,#1d4ed8 0%,transparent 35%),
+    linear-gradient(180deg,#071126,#0d1b3d,#101935,#050814);
+
+    position:relative;
+}
+
+/* Kabut */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:radial-gradient(circle,#ffffff10 0%,transparent 70%);
+    filter:blur(80px);
+    animation:fog 10s ease-in-out infinite alternate;
+}
+
+@keyframes fog{
+
+from{
+transform:translateX(-40px);
+}
+
+to{
+transform:translateX(40px);
+}
+
+}
+
+/* Bintang */
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background-image:
+    radial-gradient(circle,#fff 1px,transparent 2px),
+    radial-gradient(circle,#ffe082 1px,transparent 2px);
+
+    background-size:150px 150px,250px 250px;
+
+    opacity:.45;
+
+    animation:stars 80s linear infinite;
+}
+
+@keyframes stars{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(-1000px);
+}
+
+}
+
+/* Card */
+
+.form-card{
+
+    position:relative;
+    z-index:5;
+
+    width:100%;
+    max-width:720px;
+
+    padding:40px;
+
+    background:rgba(18,25,53,.82);
+
+    border:2px solid rgba(255,215,100,.35);
+
+    border-radius:22px;
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+    0 0 20px rgba(255,215,100,.25),
+    0 0 60px rgba(88,101,242,.25);
+
+}
+
+/* Hiasan Sudut */
+
+.form-card::before{
+
+content:"⚔ EKSTRAKULIKULER ⚔";
+
+display:block;
+
+font-family:'Cinzel',serif;
+
+font-size:30px;
+
+font-weight:bold;
+
+text-align:center;
+
+color:#ffd54f;
+
+margin-bottom:10px;
+
+text-shadow:0 0 10px rgba(255,215,64,.6);
+
+}
+
+.form-card::after{
+
+content:"Kirim dan Bergabunglah ke ekstrakulikuler pilihan kalian.";
+
+display:block;
+
+text-align:center;
+
+margin-bottom:30px;
+
+color:#dbe8ff;
+
+font-size:14px;
+
+}
+
+/* Form */
+
+#user-data{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+/* Label */
+
+label{
+
+margin-top:15px;
+
+margin-bottom:8px;
+
+font-weight:600;
+
+color:#ffffff;
+
+}
+
+p{
+
+margin-top:20px;
+
+margin-bottom:10px;
+
+color:#ffd54f;
+
+font-weight:bold;
+
+letter-spacing:.5px;
+
+}
+
+/* Input */
+
+input[type=text],
+select{
+
+width:100%;
+
+padding:14px 16px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,215,64,.25);
+
+border-radius:12px;
+
+color:white;
+
+font-size:15px;
+
+outline:none;
+
+transition:.3s;
+
+}
+
+input::placeholder{
+
+color:#cfd8ff;
+
+}
+
+select option{
+
+background:#16213e;
+
+color:white;
+
+}
+
+input:focus,
+select:focus{
+
+border-color:#ffd54f;
+
+box-shadow:
+
+0 0 15px rgba(255,215,64,.45);
+
+background:rgba(255,255,255,.12);
+
+}
+
+/* Radio & Checkbox */
+
+input[type=radio],
+input[type=checkbox]{
+
+accent-color:#ffd54f;
+
+margin-right:8px;
+
+}
+
+label:has(input[type=radio]),
+label:has(input[type=checkbox]){
+
+display:flex;
+
+align-items:center;
+
+padding:11px 14px;
+
+margin-top:8px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid transparent;
+
+border-radius:10px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+label:has(input[type=radio]):hover,
+label:has(input[type=checkbox]):hover{
+
+background:rgba(255,215,64,.10);
+
+border-color:#ffd54f;
+
+transform:translateX(5px);
+
+}
+
+/* Tombol */
+
+button{
+
+margin-top:35px;
+
+padding:16px;
+
+border:none;
+
+border-radius:14px;
+
+cursor:pointer;
+
+font-size:16px;
+
+font-family:'Cinzel',serif;
+
+font-weight:bold;
+
+letter-spacing:1px;
+
+color:#1a1a1a;
+
+background:linear-gradient(135deg,#ffe082,#ffca28,#f59e0b);
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:translateY(-4px);
+
+box-shadow:
+
+0 0 20px rgba(255,215,64,.7);
+
+}
+
+button:active{
+
+transform:scale(.97);
+
+}
+
+/* Scroll */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#09101f;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#ffd54f;
+    border-radius:20px;
+}
+
+/* Responsive */
+
+@media(max-width:700px){
+
+.form-card{
+padding:25px;
+}
+
+.form-card::before{
+font-size:22px;
+}
+
+}

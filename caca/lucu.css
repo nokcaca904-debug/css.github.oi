@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Quicksand',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding:50px 20px;
+
+    background:
+    radial-gradient(circle at top left,#ffd8e8 0%,transparent 30%),
+    radial-gradient(circle at bottom right,#d8f7d4 0%,transparent 35%),
+    #fffafc;
+}
+
+/* Card */
+
+.form-card{
+
+    width:100%;
+    max-width:700px;
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:35px;
+
+    border:3px solid #ffe6ef;
+
+    box-shadow:
+    0 15px 35px rgba(255,182,193,.25);
+
+}
+
+/* Judul */
+
+.form-card::before{
+
+content:"🌷 Pendaftaran Ekstrakurikuler 🌷";
+
+display:block;
+
+text-align:center;
+
+font-size:30px;
+
+font-weight:700;
+
+color:#ff7aa2;
+
+margin-bottom:8px;
+
+}
+
+.form-card::after{
+
+content:"Selamat datang! Isi data dengan lengkap ya 💕";
+
+display:block;
+
+text-align:center;
+
+font-size:14px;
+
+color:#88a67d;
+
+margin-bottom:30px;
+
+}
+
+/* Form */
+
+#user-data{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+/* Label */
+
+label{
+
+margin-top:15px;
+
+margin-bottom:8px;
+
+font-weight:600;
+
+color:#666;
+
+}
+
+p{
+
+margin-top:18px;
+
+margin-bottom:10px;
+
+font-weight:700;
+
+color:#ff8db3;
+
+}
+
+/* Input */
+
+input[type=text],
+select{
+
+width:100%;
+
+padding:14px 16px;
+
+background:#fff9fb;
+
+border:2px solid #ffdce8;
+
+border-radius:18px;
+
+font-size:15px;
+
+outline:none;
+
+transition:.3s;
+
+}
+
+input::placeholder{
+
+color:#c6a7b5;
+
+}
+
+input:focus,
+select:focus{
+
+border-color:#a8ddb5;
+
+background:white;
+
+box-shadow:0 0 10px rgba(168,221,181,.3);
+
+}
+
+select option{
+
+color:#555;
+
+}
+
+/* Radio */
+
+input[type=radio],
+input[type=checkbox]{
+
+accent-color:#ff93b7;
+
+margin-right:8px;
+
+}
+
+label:has(input[type=radio]),
+label:has(input[type=checkbox]){
+
+display:flex;
+
+align-items:center;
+
+padding:12px;
+
+margin-top:8px;
+
+background:#fff8fb;
+
+border:2px solid #ffe6ef;
+
+border-radius:15px;
+
+transition:.25s;
+
+cursor:pointer;
+
+}
+
+label:has(input[type=radio]):hover,
+label:has(input[type=checkbox]):hover{
+
+background:#f5fff3;
+
+border-color:#b8e6b8;
+
+transform:translateX(5px);
+
+}
+
+/* Tombol */
+
+button{
+
+margin-top:30px;
+
+padding:15px;
+
+border:none;
+
+border-radius:20px;
+
+font-size:16px;
+
+font-weight:700;
+
+cursor:pointer;
+
+background:linear-gradient(90deg,#ffb3cf,#b8ecb2);
+
+color:#555;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 10px 20px rgba(255,182,193,.35);
+
+}
+
+/* Scroll */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#ffc8db;
+
+border-radius:20px;
+
+}
