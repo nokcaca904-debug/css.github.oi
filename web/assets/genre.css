@@ -1,0 +1,561 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --yellow: #FFD83D;
+            --yellow-light: #FFF5BD;
+            --honey: #F6B91A;
+            --orange: #F59E0B;
+            --black: #29251C;
+            --brown: #66512C;
+            --cream: #FFFDF2;
+            --white: #FFFFFF;
+            --border: #F1DD85;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--cream);
+            color: var(--black);
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            height: 75px;
+
+            padding: 0 8%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            background: white;
+
+            border-bottom: 3px solid var(--yellow);
+
+            position: sticky;
+            top: 0;
+
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+
+            position: relative;
+        }
+
+        .logo::after {
+            content: "🐝";
+
+            position: absolute;
+
+            font-size: 18px;
+
+            top: -15px;
+            right: -25px;
+        }
+
+        .navbar nav {
+            display: flex;
+            align-items: center;
+
+            gap: 28px;
+        }
+
+        .navbar nav a {
+            text-decoration: none;
+
+            color: var(--black);
+
+            font-size: 14px;
+            font-weight: 500;
+
+            transition: 0.3s;
+        }
+
+        .navbar nav a:hover {
+            color: var(--orange);
+        }
+
+        .login-btn {
+            background: var(--yellow);
+
+            padding: 9px 18px;
+
+            border-radius: 12px;
+
+            font-weight: 600 !important;
+
+            box-shadow: 0 4px 0 #D49B00;
+        }
+
+
+        /* =========================
+           HERO GENRE
+        ========================= */
+
+        .genre-hero {
+            position: relative;
+
+            padding: 70px 8% 60px;
+
+            text-align: center;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 10% 20%,
+                    #FFE980 0,
+                    transparent 20%
+                ),
+                radial-gradient(
+                    circle at 90% 80%,
+                    #FFEBA1 0,
+                    transparent 20%
+                ),
+                linear-gradient(
+                    135deg,
+                    #FFF9DC,
+                    #FFF0A3
+                );
+        }
+
+        .genre-hero h1 {
+            font-size: 42px;
+
+            margin-bottom: 12px;
+
+            position: relative;
+            z-index: 2;
+        }
+
+        .genre-hero h1 span {
+            color: var(--orange);
+        }
+
+        .genre-hero p {
+            color: var(--brown);
+
+            font-size: 14px;
+
+            position: relative;
+            z-index: 2;
+        }
+
+        .bee {
+            position: absolute;
+
+            font-size: 55px;
+
+            right: 12%;
+            top: 40px;
+
+            animation: beeFly 4s ease-in-out infinite;
+        }
+
+        @keyframes beeFly {
+
+            0% {
+                transform: translateY(0) rotate(5deg);
+            }
+
+            50% {
+                transform: translateY(-15px) rotate(-5deg);
+            }
+
+            100% {
+                transform: translateY(0) rotate(5deg);
+            }
+
+        }
+
+
+        /* =========================
+           POLA SARANG MADU
+        ========================= */
+
+        .honeycomb {
+            position: absolute;
+
+            width: 220px;
+            height: 220px;
+
+            opacity: 0.2;
+
+            background-image:
+                linear-gradient(30deg, #D49B00 12%, transparent 12.5%, transparent 87%, #D49B00 87.5%),
+                linear-gradient(150deg, #D49B00 12%, transparent 12.5%, transparent 87%, #D49B00 87.5%),
+                linear-gradient(30deg, #D49B00 12%, transparent 12.5%, transparent 87%, #D49B00 87.5%),
+                linear-gradient(150deg, #D49B00 12%, transparent 12.5%, transparent 87%, #D49B00 87.5%);
+
+            background-size: 55px 95px;
+
+            transform: rotate(15deg);
+        }
+
+        .honey-left {
+            left: -60px;
+            bottom: -80px;
+        }
+
+        .honey-right {
+            right: -50px;
+            top: -70px;
+        }
+
+
+        /* =========================
+           GENRE
+        ========================= */
+
+        .genre-section {
+            padding: 55px 8%;
+        }
+
+        .genre-title {
+            text-align: center;
+
+            font-size: 26px;
+
+            margin-bottom: 30px;
+        }
+
+        .genre-title::before {
+            content: "🍯 ";
+
+            font-size: 22px;
+        }
+
+        .genre-list {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 18px;
+
+            max-width: 1000px;
+
+            margin: auto;
+        }
+
+        .genre-item {
+            text-decoration: none;
+
+            color: var(--black);
+
+            background: white;
+
+            border: 2px solid var(--border);
+
+            border-radius: 17px;
+
+            padding: 18px 15px;
+
+            text-align: center;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            box-shadow:
+                0 6px 15px rgba(80, 60, 10, 0.08);
+
+            transition: 0.3s ease;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .genre-item::after {
+            content: "🐝";
+
+            position: absolute;
+
+            right: -25px;
+            bottom: -25px;
+
+            font-size: 40px;
+
+            opacity: 0;
+
+            transition: 0.3s;
+        }
+
+        .genre-item:hover {
+            background: var(--yellow);
+
+            border-color: var(--honey);
+
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 10px 20px rgba(80, 60, 10, 0.15);
+        }
+
+        .genre-item:hover::after {
+            right: 8px;
+            bottom: 5px;
+
+            opacity: 0.7;
+        }
+
+        .genre-item.active {
+            background: var(--yellow);
+
+            border-color: var(--orange);
+
+            box-shadow:
+                0 7px 0 #D49B00;
+        }
+
+
+        /* =========================
+           HASIL CERITA
+        ========================= */
+
+        .story-section {
+            padding: 20px 8% 80px;
+        }
+
+        .story-title {
+            font-size: 25px;
+
+            margin-bottom: 30px;
+
+            text-align: center;
+        }
+
+        .story-title span {
+            color: var(--orange);
+        }
+
+        .story-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 25px;
+        }
+
+
+        /* =========================
+           CARD
+        ========================= */
+
+        .card {
+            background: white;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            border: 2px solid var(--border);
+
+            box-shadow:
+                0 8px 25px rgba(80, 60, 10, 0.10);
+
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+
+            border-color: var(--yellow);
+
+            box-shadow:
+                0 15px 30px rgba(80, 60, 10, 0.15);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 280px;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+        .card-content {
+            padding: 18px;
+        }
+
+        .card-content h3 {
+            font-size: 16px;
+
+            line-height: 1.5;
+
+            margin-bottom: 8px;
+        }
+
+        .card-content p {
+            color: #8B7D5C;
+
+            font-size: 12px;
+
+            line-height: 1.6;
+
+            margin-bottom: 15px;
+        }
+
+        .read-btn {
+            text-decoration: none;
+
+            color: #D68F00;
+
+            font-size: 13px;
+
+            font-weight: 600;
+        }
+
+        .read-btn:hover {
+            color: var(--black);
+        }
+
+
+        /* =========================
+           TIDAK ADA CERITA
+        ========================= */
+
+        .empty {
+            text-align: center;
+
+            padding: 60px 20px;
+
+            background: white;
+
+            border: 2px dashed var(--border);
+
+            border-radius: 20px;
+
+            max-width: 600px;
+
+            margin: auto;
+        }
+
+        .empty .bee-icon {
+            font-size: 55px;
+
+            margin-bottom: 10px;
+        }
+
+        .empty h3 {
+            margin-bottom: 8px;
+        }
+
+        .empty p {
+            font-size: 13px;
+
+            color: #8B7D5C;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: var(--black);
+
+            color: white;
+
+            text-align: center;
+
+            padding: 40px 20px;
+        }
+
+        footer h3 {
+            color: var(--yellow);
+
+            font-size: 24px;
+
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            color: #D8D0B8;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            .genre-list {
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+            .story-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .navbar {
+                height: auto;
+
+                padding: 18px 20px;
+
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            .navbar nav {
+                gap: 12px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .genre-hero h1 {
+                font-size: 32px;
+            }
+
+            .genre-list {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .story-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 420px) {
+
+            .genre-list {
+                grid-template-columns: 1fr;
+            }
+
+            .genre-section,
+            .story-section {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+        }

@@ -1,0 +1,352 @@
+
+/* ==========================
+   GOOGLE FONT
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==========================
+   ROOT COLOR
+========================== */
+:root{
+    --primary:#6BBF8D;
+    --secondary:#A8E6B5;
+    --light:#F5FFF6;
+    --dark:#356859;
+    --accent:#DDF7E3;
+    --white:#ffffff;
+    --shadow:0 15px 35px rgba(74,138,99,.15);
+}
+
+/* ==========================
+   RESET
+========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 15px;
+    overflow-x:hidden;
+    background:
+        radial-gradient(circle at top left,#c9f4d7 0%,transparent 30%),
+        radial-gradient(circle at bottom right,#b2ecc6 0%,transparent 35%),
+        linear-gradient(135deg,#eefdf3,#d8f6df,#f7fff8);
+    position:relative;
+}
+
+/* ==========================
+   LEAF DECORATION
+========================== */
+
+body::before,
+body::after{
+    content:"🌿";
+    position:fixed;
+    font-size:150px;
+    opacity:.08;
+    pointer-events:none;
+    animation:floatLeaf 10s ease-in-out infinite;
+}
+
+body::before{
+    left:-20px;
+    top:-10px;
+    transform:rotate(-20deg);
+}
+
+body::after{
+    right:-10px;
+    bottom:-10px;
+    transform:rotate(25deg);
+}
+
+@keyframes floatLeaf{
+    0%{
+        transform:translateY(0) rotate(0deg);
+    }
+    50%{
+        transform:translateY(-15px) rotate(8deg);
+    }
+    100%{
+        transform:translateY(0) rotate(0deg);
+    }
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.form-card,
+.hasil-card,
+.error-container{
+    width:100%;
+    max-width:780px;
+    background:rgba(255,255,255,.82);
+    backdrop-filter:blur(15px);
+    border-radius:30px;
+    padding:35px;
+    box-shadow:var(--shadow);
+    border:1px solid rgba(255,255,255,.6);
+    animation:fade .7s ease;
+    position:relative;
+}
+
+.form-card::before,
+.hasil-card::before,
+.error-container::before{
+    content:"🍃";
+    position:absolute;
+    right:20px;
+    top:15px;
+    font-size:35px;
+    opacity:.3;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ==========================
+   TITLE
+========================== */
+
+h2{
+    color:var(--dark);
+    margin-bottom:12px;
+    text-align:center;
+    font-size:30px;
+}
+
+p{
+    color:#4c6d5b;
+    margin-bottom:12px;
+}
+
+/* ==========================
+   LABEL
+========================== */
+
+label{
+    display:block;
+    margin-top:16px;
+    margin-bottom:6px;
+    color:var(--dark);
+    font-weight:600;
+}
+
+/* ==========================
+   INPUT
+========================== */
+
+input[type=text],
+input[type=tel],
+textarea,
+select{
+    width:100%;
+    padding:14px 18px;
+    border:none;
+    border-radius:15px;
+    background:#eefcf1;
+    font-size:15px;
+    transition:.3s;
+    outline:none;
+}
+
+textarea{
+    resize:vertical;
+    min-height:120px;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    background:white;
+    box-shadow:0 0 0 4px rgba(107,191,141,.25);
+}
+
+/* ==========================
+   RADIO & CHECKBOX
+========================== */
+
+input[type=radio],
+input[type=checkbox]{
+    accent-color:#68bb88;
+    margin-right:8px;
+    transform:scale(1.15);
+}
+
+label:has(input[type=radio]),
+label:has(input[type=checkbox]){
+    display:flex;
+    align-items:center;
+    background:#f3fff5;
+    padding:10px 14px;
+    border-radius:12px;
+    margin-top:8px;
+    cursor:pointer;
+    transition:.25s;
+}
+
+label:has(input[type=radio]):hover,
+label:has(input[type=checkbox]):hover{
+    background:#d8f7df;
+    transform:translateX(5px);
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+button{
+    width:100%;
+    margin-top:25px;
+    padding:15px;
+    border:none;
+    border-radius:18px;
+    cursor:pointer;
+    background:linear-gradient(135deg,#7dd39d,#4fa972);
+    color:white;
+    font-size:17px;
+    font-weight:600;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 20px rgba(79,169,114,.3);
+}
+
+/* ==========================
+   ERROR BOX
+========================== */
+
+.error-message{
+    display:none;
+    margin-top:20px;
+    background:#ffe6e6;
+    color:#b30000;
+    padding:15px;
+    border-radius:15px;
+    border-left:6px solid red;
+}
+
+.error-container{
+    text-align:center;
+}
+
+.error-container ul{
+    text-align:left;
+    margin:20px 0;
+    padding-left:25px;
+}
+
+.error-container a{
+    display:inline-block;
+    text-decoration:none;
+    margin-top:15px;
+    background:var(--primary);
+    color:white;
+    padding:12px 22px;
+    border-radius:14px;
+    transition:.3s;
+}
+
+.error-container a:hover{
+    background:var(--dark);
+}
+
+/* ==========================
+   TABLE
+========================== */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+    overflow:hidden;
+    border-radius:15px;
+}
+
+th{
+    background:#75c993;
+    color:white;
+    padding:14px;
+}
+
+td{
+    padding:14px;
+    text-align:center;
+    background:#f5fff7;
+}
+
+tr:nth-child(even) td{
+    background:#ebfaef;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+    .form-card,
+    .hasil-card,
+    .error-container{
+        padding:25px;
+    }
+
+    h2{
+        font-size:24px;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+    body::before,
+    body::after{
+        font-size:90px;
+    }
+}
+
+@media(max-width:480px){
+
+    body{
+        padding:20px 10px;
+    }
+
+    h2{
+        font-size:22px;
+    }
+
+    button{
+        font-size:15px;
+    }
+
+    input,
+    textarea,
+    select{
+        font-size:14px;
+    }
+
+    body::before,
+    body::after{
+        font-size:70px;
+    }
+}

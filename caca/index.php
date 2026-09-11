@@ -7,8 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar ekstrakulikuler</title>
-
-    <link rel="stylesheet" href="rapih.css">
+    <link rel="stylesheet" href="jjp.css">
 </head>
 <body>
     <div class="stars"></div>
